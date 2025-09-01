@@ -1,8 +1,11 @@
+/* Ngan cach giua cac muc */
 ul.barrier > li {
   margin-bottom: 20px;
   border-bottom: 1px solid #ccc; /* thay cho <hr> */
   padding-bottom: 10px;
 }
+
+/* Ghi chu */
 .note {
   padding: 8px;
   border-left: 4px solid orange;
@@ -24,6 +27,7 @@ ul {
 html {
   scroll-behavior: smooth;
 }
+
 /* Bỏ style mặc định của link */
 ul,
 ol.menu {
