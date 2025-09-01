@@ -1,3 +1,14 @@
 html {
   scroll-behavior: smooth;
 }
+ol.menu {
+  a {
+    color: inherit; /* kế thừa màu chữ từ cha (giống text thường) */
+    text-decoration: none; /* bỏ gạch chân */
+  }
+
+  a:hover {
+    text-decoration: underline; /* tuỳ chọn: khi hover (trỏ chuột vào) mới gạch chân */
+    cursor: pointer; /* hiện con trỏ tay khi hover */
+  }
+}

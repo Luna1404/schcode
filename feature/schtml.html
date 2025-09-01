@@ -12,13 +12,26 @@
     <title>Schtml</title>
   </head>
   <body>
+    <!-- Về trang chủ (index) -->
+    <a href="../index.html">Trang chủ</a>
+    <!-- Mục lục -->
     <h2>Mục lục</h2>
-    <ul>
-      <li><a href="#heading">Các thẻ heading</a></li>
-      <li><a href="#paragraph">Thẻ paragraph</a></li>
-      <li><a href="#strong-em">Thẻ strong và thẻ em</a></li>
-    </ul>
-    <h2>HTML Tag Info:</h2>
+    <ol class="menu" type="I">
+      <li><a href="#taginfomation">Giới thiệu các thẻ</a></li>
+      <ul>
+        <li><a href="#heading">Các thẻ heading</a></li>
+        <li><a href="#paragraph">Thẻ paragraph</a></li>
+        <li><a href="#strong-em">Thẻ in đậm và thẻ in nghiêng</a></li>
+        <li><a href="#small">Thẻ thu nhỏ font chữ</a></li>
+      </ul>
+      <li><a href="#moretag">Một số thẻ khác</a></li>
+      <ul>
+        <li><a href="break">Thẻ ngắt dòng</a></li>
+      </ul>
+      <li>Các ghi chú</li>
+    </ol>
+
+    <h2 id="taginfomation">I. Giới thiệu các thẻ:</h2>
     <ul>
       <!-- Thẻ h -->
       <li id="heading">
@@ -95,8 +108,41 @@
         <h3>Output:</h3>
         <strong>Đoạn này được in đậm</strong><br />
         <em>Đoạn này được in nghiêng</em>
+        <p>
+          <b>
+            💡Ghi chú: Có thể sử dụng thẻ &lt;b&gt; và thẻ &lt;i&gt; để chỉ đơn
+            giản là in đậm và in nghiêng mà không mang tính "ngữ nghĩa"
+          </b>
+        </p>
       </li>
       <hr />
+      <!-- Thẻ small -->
+      <li id="small">
+        <p>
+          <strong>Thẻ small:</strong> In nhỏ font chữ xuống so với bình thường
+        </p>
+        <h3>Input:</h3>
+        <code
+          >&lt;p&gt;Đây là font chữ bình thường &lt;/p&gt;<br />
+          &lt;small&gt;Đây là font chữ khi sữ dụng thẻ small&lt;/small&gt;</code
+        >
+        <h3>Output:</h3>
+        <p>Đây là font chữ bình thường</p>
+        <small>Đây là font chữ khi sữ dụng thẻ small</small>
+      </li>
+      <hr />
+    </ul>
+
+    <h2 id="moretag">II. Một số thẻ khác</h2>
+    <p>Những thẻ này khá dễ hiểu nên tôi chỉ giải thích sơ qua thôi nhé</p>
+    <ul>
+      <li id="break">
+        <p>
+          <strong>Thẻ hr - thẻ ngắt dòng: </strong>như cái tên, sẽ ngắt dòng
+          hiện tại và xuống dòng ngay vị trí thẻ này, đây là thẻ tự đóng nên có
+          thể ghi &lt;br&gt; hay &lt;/br&gt; đều được
+        </p>
+      </li>
     </ul>
   </body>
 </html>
