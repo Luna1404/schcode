@@ -8,12 +8,20 @@
       type="png"
       href="https://cdn-icons-png.flaticon.com/512/5968/5968267.png"
     />
+    <link rel="stylesheet" href="/filecss/style.css" />
     <title>Schtml</title>
   </head>
   <body>
+    <h2>Mục lục</h2>
+    <ul>
+      <li><a href="#heading">Các thẻ heading</a></li>
+      <li><a href="#paragraph">Thẻ paragraph</a></li>
+      <li><a href="#strong-em">Thẻ strong và thẻ em</a></li>
+    </ul>
     <h2>HTML Tag Info:</h2>
     <ul>
-      <li>
+      <!-- Thẻ h -->
+      <li id="heading">
         <p>
           <strong>Các thẻ h (heading):</strong> Thẻ tiêu đề, thường là thẻ tiêu
           đề đầu tiên cho nội dung được viết. Lưu ý chỉ sử dụng cho thẻ tiêu đề,
@@ -22,14 +30,12 @@
         </p>
         <h3>Input:</h3>
         <code>
-          <pre>
-&lt;h1&gt;This is heading 1&lt;/h1&gt;
-&lt;h2&gt;This is heading 2&lt;/h2&gt;
-&lt;h3&gt;This is heading 3&lt;/h3&gt;
-&lt;h4&gt;This is heading 4&lt;/h4&gt;
-&lt;h5&gt;This is heading 5&lt;/h5&gt;
-&lt;h6&gt;This is heading 6&lt;/h6&gt;
-          </pre>
+          &lt;h1&gt;This is heading 1&lt;/h1&gt;<br />
+          &lt;h2&gt;This is heading 2&lt;/h2&gt;<br />
+          &lt;h3&gt;This is heading 3&lt;/h3&gt;<br />
+          &lt;h4&gt;This is heading 4&lt;/h4&gt;<br />
+          &lt;h5&gt;This is heading 5&lt;/h5&gt;<br />
+          &lt;h6&gt;This is heading 6&lt;/h6&gt;<br />
         </code>
         <h3>Output:</h3>
         <h1>This is heading 1</h1>
@@ -39,8 +45,9 @@
         <h5>This is heading 5</h5>
         <h6>This is heading 6</h6>
       </li>
-
-      <li>
+      <hr />
+      <!-- Thẻ p -->
+      <li id="paragraph">
         <p>
           <strong>Thẻ p (paragraph)</strong>: Thẻ văn bản, thường được dùng để
           in các đoạn văn
@@ -57,12 +64,24 @@
         </code>
         <p>
           <b>
-            Ghi chú: Có thể sử dụng Lorem(number hoặc *number) để tạo số từ hoặc
-            số dòng chữ ngẫu nhiên
+            💡Ghi chú: Có thể sử dụng Lorem(number hoặc *number) để tạo số từ
+            hoặc số dòng chữ ngẫu nhiên
           </b>
         </p>
+        <h3>Output:</h3>
+        <p>
+          Lorem ipsum dolore, sit amet consectetur adipisicing elit. Quis, neque
+          iure, nisi eveniet explicabo dolor consectetur tempora minima expedita
+          ea vitae dolore quibusdam. Repellendus quos inventore tempora
+          mollitia! Assumenda, omnis? Harum impedit sequi eaque quasi itaque
+          vero, minus eius soluta explicabo qui labore cum unde nemo doloribus
+          culpa dicta quod alias, architecto officia adipisci consequatur non!
+          Dolor nemo assumenda eum.
+        </p>
       </li>
-      <li>
+      <hr />
+      <!-- Thẻ strong, em -->
+      <li id="strong-em">
         <p>
           <strong>Thẻ strong, em:</strong> In đậm và in nghiêng văn bản, strong
           và italic có mang tính "ngữ nghĩa", khi trình duyệt đọc vào sẽ hiểu
@@ -70,13 +89,14 @@
         </p>
         <h3>Input:</h3>
         <code>
-          <pre>
-&lt;strong&gt;Đoạn này được in đậm&lt;/strong&gt; 
-&lt;em&gt;Đoạn này được in nghiêng&lt;/em&gt;
-          </pre>
+          &lt;strong&gt;Đoạn này được in đậm&lt;/strong&gt; <br />
+          &lt;em&gt;Đoạn này được in nghiêng&lt;/em&gt;<br />
         </code>
         <h3>Output:</h3>
+        <strong>Đoạn này được in đậm</strong><br />
+        <em>Đoạn này được in nghiêng</em>
       </li>
+      <hr />
     </ul>
   </body>
 </html>
