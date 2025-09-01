@@ -1,19 +1,27 @@
+.container {
+  max-width: 1200px; /* Giới hạn chiều rộng nội dung */
+  margin: 0 auto; /* Căn giữa */
+  padding: 20px; /* Cách lề trong */
+}
+
 html {
   scroll-behavior: smooth;
 }
-ol.menu {
-a, a:visited {
-  color: inherit;         /* màu chữ kế thừa từ cha */
-  text-decoration: none;  /* bỏ gạch chân */
+/* Bỏ style mặc định của link */
+a {
+  text-decoration: none; /* Bỏ gạch chân */
+  color: black; /* Màu chữ */
+  font-weight: 500; /* Chữ đậm nhẹ */
 }
 
+/* Khi hover thì đổi màu cho rõ hơn */
 a:hover {
-  text-decoration: underline; /* hoặc bỏ luôn nếu không muốn gạch chân khi hover */
-  cursor: pointer; 
+  text-decoration: underline; /* Gạch chân khi hover (tuỳ chọn) */
 }
 
-a:active {
-  color: inherit; /* giữ nguyên khi click */
-}
-
+/* Cho danh sách nhìn gọn hơn */
+ol,
+ul {
+  margin: 5px 0 5px 20px; /* Khoảng cách */
+  padding: 0;
 }

@@ -13,10 +13,23 @@ h tiêu đề, p đoạn văn bản, ul/ol danh sách không/có thứ tự (li 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/filecss/style.css" />
+    <link rel="stylesheet" href="/filecss/index.css" />
     <title>Schcode</title>
   </head>
   <body>
-    <h1>Welcome to my website!</h1>
+    <nav class="navbar">
+      <a href="../index.html" class="logo">
+        <img src="icon/furina.jpg" alt="Logo" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="gioithieu.html">Giới thiệu</a></li>
+        <li><a href="lienhe.html">Liên hệ</a></li>
+      </ul>
+      <button id="theme-toggle">🌙</button>
+      <script src="filejs/script.js"></script>
+    </nav>
+
     <p>This site is created to share my information about HTML, CSS, JS, ...</p>
     <ul>
       <li><a href="feature/schtml.html" , target="_self">HTML</a></li>

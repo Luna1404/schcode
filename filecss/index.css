@@ -1,1 +1,67 @@
+/* Reset nhẹ */
+body {
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+}
 
+/* Logo web */
+.logo img {
+  height: 40px; /* chỉnh kích thước logo */
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Navbar( thanh tren cung ) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+}
+
+.navbar .logo {
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Nút chuyển theme */
+#theme-toggle {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Dark mode */
+body.dark {
+  background: #222;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background: #000;
+}
+
+body.dark #theme-toggle {
+  border-color: #eee;
+}
