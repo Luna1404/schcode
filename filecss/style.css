@@ -2,13 +2,18 @@ html {
   scroll-behavior: smooth;
 }
 ol.menu {
-  a {
-    color: inherit; /* kế thừa màu chữ từ cha (giống text thường) */
-    text-decoration: none; /* bỏ gạch chân */
-  }
+a, a:visited {
+  color: inherit;         /* màu chữ kế thừa từ cha */
+  text-decoration: none;  /* bỏ gạch chân */
+}
 
-  a:hover {
-    text-decoration: underline; /* tuỳ chọn: khi hover (trỏ chuột vào) mới gạch chân */
-    cursor: pointer; /* hiện con trỏ tay khi hover */
-  }
+a:hover {
+  text-decoration: underline; /* hoặc bỏ luôn nếu không muốn gạch chân khi hover */
+  cursor: pointer; 
+}
+
+a:active {
+  color: inherit; /* giữ nguyên khi click */
+}
+
 }
