@@ -61,7 +61,10 @@ body.dark {
 body.dark .navbar {
   background: #000;
 }
-
+/* Khi dark mode thi menu mau sang */
+body.dark a {
+  color: white;
+}
 body.dark #theme-toggle {
   border-color: #eee;
 }
