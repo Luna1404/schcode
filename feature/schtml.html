@@ -24,26 +24,32 @@
       <script src="../filejs/script.js"></script>
     </nav>
 
-    <!-- Mục lục -->
+    <!-- Nội dung ghi vào div này -->
     <div class="container">
+      <!-- Mục lục -->
       <h2>Mục lục</h2>
       <ol class="menu" type="I">
-        <li><a href="#taginfomation">Giới thiệu các thẻ</a></li>
-        <ul>
-          <li><a href="#heading">Các thẻ heading</a></li>
-          <li><a href="#paragraph">Thẻ paragraph</a></li>
-          <li><a href="#strong-em">Thẻ in đậm và thẻ in nghiêng</a></li>
-          <li><a href="#small">Thẻ thu nhỏ font chữ</a></li>
-        </ul>
-        <li><a href="#moretag">Một số thẻ khác</a></li>
-        <ul>
-          <li><a href="break">Thẻ ngắt dòng</a></li>
-        </ul>
+        <li>
+          <a href="#taginfomation">Giới thiệu các thẻ</a>
+          <ul>
+            <li><a href="#heading">Các thẻ heading</a></li>
+            <li><a href="#paragraph">Thẻ paragraph</a></li>
+            <li><a href="#strong-em">Thẻ in đậm và thẻ in nghiêng</a></li>
+            <li><a href="#small">Thẻ thu nhỏ font chữ</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#moretag">Một số thẻ khác</a>
+          <ul>
+            <li><a href="break">Thẻ ngắt dòng</a></li>
+          </ul>
+        </li>
         <li>Các ghi chú</li>
       </ol>
 
       <h2 id="taginfomation">I. Giới thiệu các thẻ:</h2>
-      <ul>
+      <ul class="barrier">
+        <!-- Class barrier là cái gạch ngang ngăn cách mỗi phần-->
         <!-- Thẻ h -->
         <li id="heading">
           <p>
@@ -53,14 +59,16 @@
             cho mục đích này
           </p>
           <h3>Input:</h3>
-          <code>
-            &lt;h1&gt;This is heading 1&lt;/h1&gt;<br />
-            &lt;h2&gt;This is heading 2&lt;/h2&gt;<br />
-            &lt;h3&gt;This is heading 3&lt;/h3&gt;<br />
-            &lt;h4&gt;This is heading 4&lt;/h4&gt;<br />
-            &lt;h5&gt;This is heading 5&lt;/h5&gt;<br />
-            &lt;h6&gt;This is heading 6&lt;/h6&gt;<br />
-          </code>
+          <pre>
+            <code>
+              &lt;h1&gt;This is heading 1&lt;/h1&gt; 
+              &lt;h2&gt;This is heading 2&lt;/h2&gt; 
+              &lt;h3&gt;This is heading 3&lt;/h3&gt; 
+              &lt;h4&gt;This is heading 4&lt;/h4&gt; 
+              &lt;h5&gt;This is heading 5&lt;/h5&gt;
+              &lt;h6&gt;This is heading 6&lt;/h6&gt;
+            </code>
+</pre>
           <h3>Output:</h3>
           <h1>This is heading 1</h1>
           <h2>This is heading 2</h2>
@@ -69,7 +77,7 @@
           <h5>This is heading 5</h5>
           <h6>This is heading 6</h6>
         </li>
-        <hr />
+
         <!-- Thẻ p -->
         <li id="paragraph">
           <p>
@@ -77,33 +85,25 @@
             in các đoạn văn
           </p>
           <h3>Input:</h3>
-          <code>
-            &lt;p&gt; Lorem ipsum dolore, sit amet consectetur adipisicing elit.
-            Quis, neque iure, nisi eveniet explicabo dolor consectetur tempora
-            minima expedita ea vitae dolore quibusdam. Repellendus quos
-            inventore tempora mollitia! Assumenda, omnis? Harum impedit sequi
-            eaque quasi itaque vero, minus eius soluta explicabo qui labore cum
-            unde nemo doloribus culpa dicta quod alias, architecto officia
-            adipisci consequatur non! Dolor nemo assumenda eum. &lt;/p&gt;
-          </code>
-          <p>
-            <b>
-              💡Ghi chú: Có thể sử dụng Lorem(number hoặc *number) để tạo số từ
-              hoặc số dòng chữ ngẫu nhiên
-            </b>
+          <pre>
+            <code>
+              &lt;p&gt; Lorem ipsum dolore, sit amet consectetur adipisicing elit.
+              Quis, neque iure, nisi eveniet explicabo dolor consectetur tempora
+              minima expedita ea vitae dolore quibusdam. &lt;/p&gt;
+            </code>
+          </pre>
+          <p class="note">
+            💡Ghi chú: Có thể sử dụng Lorem(number hoặc *number) để tạo số từ
+            hoặc số dòng chữ ngẫu nhiên
           </p>
           <h3>Output:</h3>
           <p>
             Lorem ipsum dolore, sit amet consectetur adipisicing elit. Quis,
             neque iure, nisi eveniet explicabo dolor consectetur tempora minima
-            expedita ea vitae dolore quibusdam. Repellendus quos inventore
-            tempora mollitia! Assumenda, omnis? Harum impedit sequi eaque quasi
-            itaque vero, minus eius soluta explicabo qui labore cum unde nemo
-            doloribus culpa dicta quod alias, architecto officia adipisci
-            consequatur non! Dolor nemo assumenda eum.
+            expedita ea vitae dolore quibusdam.
           </p>
         </li>
-        <hr />
+
         <!-- Thẻ strong, em -->
         <li id="strong-em">
           <p>
@@ -112,37 +112,36 @@
             sẽ hiểu rằng: "Ồ, chỗ này là in đậm/ in nghiêng, quan trọng nè!"
           </p>
           <h3>Input:</h3>
-          <code>
-            &lt;strong&gt;Đoạn này được in đậm&lt;/strong&gt; <br />
-            &lt;em&gt;Đoạn này được in nghiêng&lt;/em&gt;<br />
-          </code>
+          <pre>
+            <code>
+              &lt;strong&gt; Đoạn này được in đậm &lt;/strong&gt; <br />
+              &lt;em&gt; Đoạn này được in nghiêng &lt;/em&gt;<br />
+            </code>
+</pre>
           <h3>Output:</h3>
           <strong>Đoạn này được in đậm</strong><br />
           <em>Đoạn này được in nghiêng</em>
-          <p>
-            <b>
-              💡Ghi chú: Có thể sử dụng thẻ &lt;b&gt; và thẻ &lt;i&gt; để chỉ
-              đơn giản là in đậm và in nghiêng mà không mang tính "ngữ nghĩa"
-            </b>
+          <p class="note">
+            💡Ghi chú: Có thể sử dụng thẻ &lt;b&gt; và thẻ &lt;i&gt; để chỉ đơn
+            giản là in đậm và in nghiêng mà không mang tính "ngữ nghĩa"
           </p>
         </li>
-        <hr />
+
         <!-- Thẻ small -->
         <li id="small">
           <p>
             <strong>Thẻ small:</strong> In nhỏ font chữ xuống so với bình thường
           </p>
           <h3>Input:</h3>
-          <code
-            >&lt;p&gt;Đây là font chữ bình thường &lt;/p&gt;<br />
-            &lt;small&gt;Đây là font chữ khi sữ dụng thẻ
-            small&lt;/small&gt;</code
-          >
+          <pre>
+            <code>
+              &lt;p&gt; Đây là font chữ bình thường &lt;/p&gt;
+              &lt;small&gt; Đây là font chữ khi sữ dụng thẻ small &lt;/small&gt;</code>
+</pre>
           <h3>Output:</h3>
           <p>Đây là font chữ bình thường</p>
           <small>Đây là font chữ khi sữ dụng thẻ small</small>
         </li>
-        <hr />
       </ul>
 
       <h2 id="moretag">II. Một số thẻ khác</h2>

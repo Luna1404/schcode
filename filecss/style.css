@@ -1,27 +1,44 @@
+ul.barrier > li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc; /* thay cho <hr> */
+  padding-bottom: 10px;
+}
+.note {
+  padding: 8px;
+  border-left: 4px solid orange;
+  font-style: italic;
+}
+
+/* Định dạng lại văn bản */
 .container {
   max-width: 1200px; /* Giới hạn chiều rộng nội dung */
   margin: 0 auto; /* Căn giữa */
   padding: 20px; /* Cách lề trong */
 }
-
-html {
-  scroll-behavior: smooth;
-}
-/* Bỏ style mặc định của link */
-a {
-  text-decoration: none; /* Bỏ gạch chân */
-  color: black; /* Màu chữ */
-  font-weight: 500; /* Chữ đậm nhẹ */
-}
-
-/* Khi hover thì đổi màu cho rõ hơn */
-a:hover {
-  text-decoration: underline; /* Gạch chân khi hover (tuỳ chọn) */
-}
-
 /* Cho danh sách nhìn gọn hơn */
 ol,
 ul {
   margin: 5px 0 5px 20px; /* Khoảng cách */
   padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Bỏ style mặc định của link */
+ul,
+ol.menu {
+  a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: black; /* Màu chữ */
+    font-weight: 500; /* Chữ đậm nhẹ */
+  }
+
+  /* Khi hover thì đổi màu cho rõ hơn */
+  a:hover {
+    text-decoration: underline; /* Gạch chân khi hover (tuỳ chọn) */
+  }
+}
+/* Khi dark mode thi menu mau sang */
+body.dark a {
+  color: white;
 }
