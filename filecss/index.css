@@ -69,20 +69,6 @@ code {
   border-radius: 5px;
 }
 
-/* Dark mode */
-body.dark {
-  background: #222;
-  color: #eee;
-}
-
-body.dark .navbar {
-  background: #000;
-}
-
-body.dark #theme-toggle {
-  border-color: #eee;
-}
-
 /* Fix scroll ngang và style code block */
 pre {
   white-space: pre-wrap; /* Xuống dòng khi dài quá */

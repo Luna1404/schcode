@@ -1,3 +1,28 @@
+/* Định nghĩa màu*/
+:root {
+  --bg: #0f0f0f;
+  --card: #1a1a1a;
+  --text: #eaeaea;
+  --muted: #b7b7b7;
+  --brand: #ffd166;
+  --blue: #56ccf2;
+  --green: #6ee7b7;
+  --border: #2a2a2a;
+}
+/* Dark mode */
+body.dark {
+  background: #222;
+  color: #eee;
+}
+
+body.dark .navbar {
+  background: #000;
+}
+
+body.dark #theme-toggle {
+  border-color: #eee;
+}
+
 /* Ngan cach giua cac muc */
 ul.barrier > li {
   margin-bottom: 20px;
@@ -41,6 +66,9 @@ body.dark a {
   color: white;
 }
 
+body.dark pre code {
+  background-color: rgb(42, 40, 40);
+}
 pre code {
   display: block;
   font-family: "Fira Code", "Cascadia Code", "Consolas", "Courier New",
@@ -52,17 +80,6 @@ pre code {
   padding: 12px 16px;
   border-radius: 6px;
   overflow-x: auto;
-}
-/* Định nghĩa màu*/
-:root {
-  --bg: #0f0f0f;
-  --card: #1a1a1a;
-  --text: #eaeaea;
-  --muted: #b7b7b7;
-  --brand: #ffd166;
-  --blue: #56ccf2;
-  --green: #6ee7b7;
-  --border: #2a2a2a;
 }
 
 * {
@@ -146,6 +163,7 @@ body {
   color: #9a9a9a;
 }
 
+/* Footer, cai duoi cung` trang web */
 .site-footer {
   border-top: 1px solid var(--border);
   padding: 20px;
@@ -154,4 +172,8 @@ body {
 }
 .site-footer a {
   color: #cfcfcf;
+}
+body.dark footer {
+  border-top: 1px solid var(--text);
+  color: white;
 }
