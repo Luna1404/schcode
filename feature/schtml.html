@@ -1,9 +1,3 @@
-<!-- Note class
-- container : noi dung chinh
-- menu : menu ( yeah )
-- barrier (ul co cai rao ngan cach giua cac li)
-- note: cac ghi chu
--->
 <!DOCTYPE html>
 <html lang="vn">
   <head>
@@ -22,7 +16,9 @@
   <body>
     <!-- Cái thanh ở trên cùng -->
     <nav class="navbar">
-      <a href="../index.html" class="navcontent">Trang chủ</a>
+      <a href="../index.html" class="logo">
+        <img src="../icon/furina.jpg" alt="Logo" />
+      </a>
       <ul class="nav-links">
         <li>Giới thiệu</li>
         <li>Liên hệ</li>
@@ -33,22 +29,23 @@
 
     <!-- Nội dung ghi vào div này -->
     <main class="container">
-      <!-- Mục lục -->
       <h2>Mục lục</h2>
       <ol class="menu" type="I">
         <li>
           <a href="#taginfomation">Giới thiệu các thẻ</a>
           <ul>
-            <li><a href="#heading">Các thẻ heading</a></li>
-            <li><a href="#paragraph">Thẻ paragraph</a></li>
-            <li><a href="#strong-em">Thẻ in đậm và thẻ in nghiêng</a></li>
+            <li><a href="#heading-tag">Các thẻ heading</a></li>
+            <li><a href="#paragraph-tag">Thẻ paragraph</a></li>
+            <li><a href="#strong-tag">Thẻ in đậm</a></li>
+            <li><a href="#em-tag">Thẻ in nghiêng</li>
             <li><a href="#small">Thẻ thu nhỏ font chữ</a></li>
           </ul>
         </li>
         <li>
           <a href="#moretag">Một số thẻ khác</a>
           <ul>
-            <li><a href="#break">Thẻ ngắt dòng</a></li>
+            <li><a href="#break-tag">Thẻ ngắt dòng</a></li>
+            <li><a href="#horizontal-rule-tag">Thẻ gạch ngang</a></li>
           </ul>
         </li>
         <li>Các ghi chú</li>
@@ -57,8 +54,7 @@
       <h2 id="taginfomation">I. Giới thiệu các thẻ:</h2>
       <ul class="barrier">
         <!-- Class barrier là cái gạch ngang ngăn cách mỗi phần-->
-        <!-- Thẻ h -->
-        <li id="heading">
+        <li id="heading-tag">
           <p>
             <strong>Các thẻ h (heading):</strong> Thẻ tiêu đề, thường là thẻ
             tiêu đề đầu tiên cho nội dung được viết. Lưu ý chỉ sử dụng cho thẻ
@@ -75,18 +71,17 @@
 &lt;h5&gt;This is heading 5&lt;/h5&gt;
 &lt;h6&gt;This is heading 6&lt;/h6&gt;
             </code>
-</pre>
-          <h3>Output:</h3>
-          <h1>This is heading 1</h1>
-          <h2>This is heading 2</h2>
-          <h3>This is heading 3</h3>
-          <h4>This is heading 4</h4>
-          <h5>This is heading 5</h5>
-          <h6>This is heading 6</h6>
+          </pre>
+          <h3 >Output:</h3>
+            <h1>This is heading 1</h1>
+            <h2>This is heading 2</h2>
+            <h3>This is heading 3</h3>
+            <h4>This is heading 4</h4>
+            <h5>This is heading 5</h5>
+            <h6>This is heading 6</h6>
         </li>
 
-        <!-- Thẻ p -->
-        <li id="paragraph">
+        <li id="paragraph-tag">
           <p>
             <strong>Thẻ p (paragraph)</strong>: Thẻ văn bản, thường được dùng để
             in các đoạn văn
@@ -97,34 +92,49 @@
 &lt;p&gt; Lorem ipsum dolore, sit amet consectetur&lt;/p&gt;
             </code>
           </pre>
+          <h3>Output:</h3>
+          <p>Lorem ipsum dolore, sit amet consectetur</p>
           <p class="note">
             💡Ghi chú: Có thể sử dụng Lorem(number hoặc *number) để tạo số từ
             hoặc số dòng chữ ngẫu nhiên
           </p>
-          <h3>Output:</h3>
-          <p>Lorem ipsum dolore, sit amet consectetur</p>
         </li>
 
-        <!-- Thẻ strong, em -->
-        <li id="strong-em">
+        <li id="strong-tag">
           <p>
-            <strong>Thẻ strong, em:</strong> In đậm và in nghiêng văn bản,
-            strong và italic có mang tính "ngữ nghĩa", khi trình duyệt đọc vào
-            sẽ hiểu rằng: "Ồ, chỗ này là in đậm/ in nghiêng, quan trọng nè!"
+            <strong>Thẻ strong, em:</strong> In đậm văn bản, strong có mang tính
+            "ngữ nghĩa", khi trình duyệt đọc vào sẽ hiểu rằng: "Ồ, chỗ này là in
+            đậm/ in nghiêng, quan trọng nè!"
           </p>
           <h3>Input:</h3>
           <pre>
             <code>
 &lt;strong&gt; Đoạn này được in đậm &lt;/strong&gt; 
-&lt;em&gt; Đoạn này được in nghiêng &lt;/em&gt;
             </code>
-</pre>
+          </pre>
           <h3>Output:</h3>
-          <strong>Đoạn này được in đậm</strong><br />
-          <em>Đoạn này được in nghiêng</em>
+          <strong>Đoạn này được in đậm</strong>
           <p class="note">
-            💡Ghi chú: Có thể sử dụng thẻ &lt;b&gt; và thẻ &lt;i&gt; để chỉ đơn
-            giản là in đậm và in nghiêng mà không mang tính "ngữ nghĩa"
+            💡Ghi chú: Có thể sử dụng thẻ &lt;b&gt; để chỉ đơn giản là in đậm mà
+            không mang tính "ngữ nghĩa"
+          </p>
+        </li>
+        <!-- Thẻ <em> -->
+        <li id="em-tag">
+          <p>
+            <strong>Thẻ em:</strong> In nghiêng văn bản, mang tính ngữ nghĩa
+          </p>
+          <h3>Input:</h3>
+          <pre>
+            <code>
+&lt;em&gt;Đoạn in nghiêng&lt;/em&gt;
+            </code>
+          </pre>
+          <h3>Output:</h3>
+          <em>Đoạn in nghiêng</em>
+          <p class="note">
+            💡Ghi chú: Có thể sử dụng thẻ &lt;i&gt; để chỉ đơn giản là in nghiêng mà
+            không mang tính "ngữ nghĩa"
           </p>
         </li>
 
@@ -149,13 +159,21 @@
       <h2 id="moretag">II. Một số thẻ khác</h2>
       <p>Những thẻ này khá dễ hiểu nên tôi chỉ giải thích sơ qua thôi nhé</p>
       <ul>
-        <li id="break">
+        <li id="break-tag">
           <p>
             <strong>Thẻ br - thẻ ngắt dòng: </strong>như cái tên, sẽ ngắt dòng
             hiện tại và xuống dòng ngay vị trí thẻ này, đây là thẻ tự đóng nên
             có thể ghi &lt;br&gt; hay &lt;/br&gt; đều được
           </p>
         </li>
+        <li id="horizontal-rule-tag">
+          <p>
+            <strong>Thẻ hr - thẻ gạch ngang: </strong>Thẻ này tạo một đường kẻ 
+            ngang để chia nội dung. Đây là thẻ tự đóng nên chỉ cần ghi &lt;hr&gt; 
+            mà không cần thẻ đóng.
+          </p>
+        </li>
+
       </ul>
     </main>
     <footer class="site-footer">THE END</footer>
