@@ -30,17 +30,35 @@ h tiêu đề, p đoạn văn bản, ul/ol danh sách không/có thứ tự (li 
       <script src="filejs/script.js"></script>
     </nav>
     <!-- Nội dung ghi vào div này -->
-    <div class="container">
+    <main class="container">
       <h2>
         This site is created to share my information about HTML, CSS, JS, ...
       </h2>
-      <ul>
-        <li>
-          <a href="feature/schtml.html" , target="_self" , class="menu"
-            >HTML Content</a
-          >
-        </li>
-      </ul>
-    </div>
+      <section class="khungcard">
+        <a
+          class="card"
+          href="/feature/schtml.html"
+          aria-label="Xem bài: HTML cơ bản"
+        >
+          <div
+            class="card-media"
+            role="img"
+            aria-label="Ảnh minh họa HTML"
+          ></div>
+          <div class="card-body">
+            <span class="tag">HTML</span>
+            <h2 class="card-title">HTML cơ bản cho người mới</h2>
+            <p class="card-note">
+              Những thẻ quan trọng, cách cấu trúc trang, và mẹo viết semantic…
+            </p>
+            <span class="author">Schlagen</span>
+          </div>
+        </a>
+        <!-- Muốn thêm card thì thêm vào đây -->
+
+        <!--  -->
+      </section>
+    </main>
+    <footer class="site-footer">THE END</footer>
   </body>
 </html>

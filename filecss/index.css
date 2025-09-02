@@ -4,6 +4,23 @@ body {
   transition: background 0.3s, color 0.3s;
   overflow-x: hidden; /*Không cho kéo ngang trang */
 }
+/* Tắt highlight / popup khi nhấn giữ trên mobile hay đơn giản hơn là cấm copy đó */
+body {
+  -webkit-touch-callout: none; /* Safari iOS */
+  -webkit-user-select: none; /* Safari/Chrome mobile */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge cũ */
+  user-select: none; /* tiêu chuẩn */
+}
+/* Nằm trong thẻ code vẫn copy dc bth */
+pre,
+code {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
 
 /* Logo web */
 .logo img {
@@ -23,13 +40,12 @@ body {
   position: sticky;
   top: 0;
 }
-
-.navbar .logo {
+/* Noi dung trên thanh nav */
+.navbar .navcontent {
   font-weight: bold;
   color: white;
   text-decoration: none;
 }
-
 .nav-links {
   list-style: none;
   display: flex;
