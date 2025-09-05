@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="Website ic type="png"
-    href="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/5968/5968267.png" />
     <link rel="stylesheet" href="../filecss/index.css" />
     <link rel="stylesheet" href="../filecss/style.css" />
     <link
@@ -21,7 +20,6 @@
       </a>
       <ul class="nav-links">
         <li>Giới thiệu</li>
-        <li>Liên hệ</li>
       </ul>
       <button id="theme-toggle">🌙</button>
       <script src="../filejs/script.js"></script>
@@ -48,7 +46,16 @@
             <li><a href="#horizontal-rule-tag">Thẻ gạch ngang</a></li>
           </ul>
         </li>
-        <li>Các ghi chú</li>
+        <li>Các ghi chú
+          <ul>
+            <li><a href="#note-1">Ghi chú 1</a></li>
+            <li><a href="#note-2">Ghi chú 2</a></li>
+            <li><a href="#note-3">Ghi chú 3</a></li>
+            <li><a href="#note-4">Ghi chú 4</a></li>
+            <li><a href="#note-5">Ghi chú 5</a></li>
+          </ul>
+          
+        </li>
       </ol>
 
       <h2 id="taginfomation">I. Giới thiệu các thẻ:</h2>
@@ -94,7 +101,7 @@
           </pre>
           <h3>Output:</h3>
           <p>Lorem ipsum dolore, sit amet consectetur</p>
-          <p class="note">
+          <p class="note" id="note-1">
             💡Ghi chú: Có thể sử dụng Lorem(number hoặc *number) để tạo số từ
             hoặc số dòng chữ ngẫu nhiên
           </p>
@@ -104,7 +111,7 @@
           <p>
             <strong>Thẻ strong, em:</strong> In đậm văn bản, strong có mang tính
             "ngữ nghĩa", khi trình duyệt đọc vào sẽ hiểu rằng: "Ồ, chỗ này là in
-            đậm/ in nghiêng, quan trọng nè!"
+            đậm, quan trọng nè!"
           </p>
           <h3>Input:</h3>
           <pre>
@@ -114,7 +121,7 @@
           </pre>
           <h3>Output:</h3>
           <strong>Đoạn này được in đậm</strong>
-          <p class="note">
+          <p class="note" id="note-2">
             💡Ghi chú: Có thể sử dụng thẻ &lt;b&gt; để chỉ đơn giản là in đậm mà
             không mang tính "ngữ nghĩa"
           </p>
@@ -132,7 +139,7 @@
           </pre>
           <h3>Output:</h3>
           <em>Đoạn in nghiêng</em>
-          <p class="note">
+          <p class="note" id="note-3">
             💡Ghi chú: Có thể sử dụng thẻ &lt;i&gt; để chỉ đơn giản là in nghiêng mà
             không mang tính "ngữ nghĩa"
           </p>
@@ -173,7 +180,6 @@
             mà không cần thẻ đóng.
           </p>
         </li>
-
       </ul>
     </main>
     <footer class="site-footer">THE END</footer>

@@ -15,6 +15,7 @@ h tiêu đề, p đoạn văn bản, ul/ol danh sách không/có thứ tự (li 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="filecss/style.css" />
     <link rel="stylesheet" href="filecss/index.css" />
+    <link rel="icon" href="icon/FB_IMG_1750996739760.jpg" />
     <title>Schcode</title>
   </head>
   <body>
@@ -23,8 +24,17 @@ h tiêu đề, p đoạn văn bản, ul/ol danh sách không/có thứ tự (li 
         <img src="icon/furina.jpg" alt="Logo" />
       </a>
       <ul class="nav-links">
+        <li class="dropdown">
+          <button class="dropbtn">Nội dung ▼</button>
+          <div class="dropdown-content">
+            <a href="#" data-tag="all">Chọn tất cả</a>
+            <a href="#" data-tag="html">HTML</a>
+            <a href="#" data-tag="css">CSS</a>
+            <a href="#" data-tag="js">JavaScript</a>
+            <a href="#" data-tag="c++">C++</a>
+          </div>
+        </li>
         <li>Giới thiệu</li>
-        <li>Liên hệ</li>
       </ul>
       <button id="theme-toggle">🌙</button>
       <script src="filejs/script.js"></script>
@@ -34,8 +44,14 @@ h tiêu đề, p đoạn văn bản, ul/ol danh sách không/có thứ tự (li 
       <h2>
         This site is created to share my information about HTML, CSS, JS, ...
       </h2>
+
       <section class="khungcard">
-        <a class="card" href="feature/schtml.html" aria-label="HTML cơ bản">
+        <a
+          class="card"
+          href="feature/schtml.html"
+          aria-label="HTML cơ bản"
+          data-tags="html"
+        >
           <div
             class="card-media"
             role="img"
@@ -50,11 +66,46 @@ h tiêu đề, p đoạn văn bản, ul/ol danh sách không/có thứ tự (li 
             <span class="author">Schlagen</span>
           </div>
         </a>
+        <a class="card" href=" " aria-label="C++ cơ bản" data-tags="c++">
+          <div
+            class="card-media"
+            role="img"
+            aria-label="Ảnh minh họa C++"
+          ></div>
+          <div class="card-body">
+            <span class="tag">C++</span>
+            <h2 class="card-title">C++ cơ bản cho người mới</h2>
+            <p class="card-note">Kiến thức cơ bản về C++</p>
+            <span class="author">Jing bố</span>
+          </div>
+        </a>
         <!-- Muốn thêm card thì thêm vào đây -->
 
         <!--  -->
       </section>
     </main>
-    <footer class="site-footer">THE END</footer>
+    <div class="footer-row">
+      <div class="site-footer">© Trang chủ của Schcode</div>
+      <div class="site-footer">
+        Contact: <strong>luanoffical1404@gmail.com</strong>
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll(".dropdown-content a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const tag = link.getAttribute("data-tag");
+
+          document.querySelectorAll(".card").forEach((card) => {
+            if (tag === "all" || card.dataset.tags.includes(tag)) {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>

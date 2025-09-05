@@ -23,7 +23,14 @@ body.dark .navbar {
 body.dark #theme-toggle {
   border-color: #eee;
 }
+/* Khi dark mode thi menu mau sang */
+body.dark a {
+  color: white;
+}
 
+body.dark pre code {
+  background-color: #2a2a2a;
+}
 /* Ngan cach giua cac muc */
 ul.barrier > li {
   margin-bottom: 20px;
@@ -49,8 +56,8 @@ html {
 }
 
 /* Bỏ style mặc định của link */
-ul,
-ol.menu {
+ol.menu,
+ul.menu {
   a {
     text-decoration: none; /* Bỏ gạch chân */
     color: black; /* Màu chữ */
@@ -62,14 +69,7 @@ ol.menu {
     text-decoration: underline; /* Gạch chân khi hover (tuỳ chọn) */
   }
 }
-/* Khi dark mode thi menu mau sang */
-body.dark a {
-  color: white;
-}
 
-body.dark pre code {
-  background-color: #2a2a2a;
-}
 pre code {
   display: block;
   font-family: "Fira Code", "Cascadia Code", "Consolas", "Courier New",
@@ -166,16 +166,81 @@ body {
 }
 
 /* Footer, cai duoi cung` trang web */
-.site-footer {
+.footer-row {
   border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between; /* đẩy 2 footer ra 2 bên */
+  align-items: center; /* canh giữa theo trục dọc */
+}
+
+.site-footer {
   padding: 20px;
-  text-align: center;
+  text-align: left;
   color: #3c3b3b;
 }
+
 .site-footer a {
   color: #cfcfcf;
 }
-body.dark footer {
+.site-footer strong {
+  /* Cai gmail cua footer*/
+  color: #1e90ff;
+}
+body.dark .footer-row {
   border-top: 1px solid var(--text);
+}
+body.dark .site-footer {
   color: white;
+}
+
+/* Navbar dropdown, cai phan noi dung cua index */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #222;
+  min-width: 160px;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Tag nhỏ trên card */
+.card .tag {
+  display: inline-block;
+  background: #444;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  margin-bottom: 8px;
+}
+
+.dropdown-content a {
+  display: block;
+  color: #ffffff !important; /* ép luôn trắng */
+  padding: 5px;
+  text-decoration: none !important;
+}
+
+.dropdown-content a:hover {
+  background-color: #444; /* hiệu ứng hover */
+  border-radius: 5px;
 }

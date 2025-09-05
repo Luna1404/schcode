@@ -13,8 +13,7 @@ body {
   user-select: none; /* tiêu chuẩn */
 }
 /* Nằm trong thẻ code vẫn copy dc bth */
-pre,
-code {
+pre > code {
   -webkit-touch-callout: default;
   -webkit-user-select: text;
   -moz-user-select: text;
