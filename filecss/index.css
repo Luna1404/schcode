@@ -1,77 +1,162 @@
-/* Reset nhẹ */
-body {
+/* RESET & GLOBAL     */
+* {
   margin: 0;
-  transition: background 0.3s, color 0.3s;
-  overflow-x: hidden; /*Không cho kéo ngang trang */
-}
-/* Tắt highlight / popup khi nhấn giữ trên mobile hay đơn giản hơn là cấm copy đó */
-body {
-  -webkit-touch-callout: none; /* Safari iOS */
-  -webkit-user-select: none; /* Safari/Chrome mobile */
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE/Edge cũ */
-  user-select: none; /* tiêu chuẩn */
-}
-/* Nằm trong thẻ code vẫn copy dc bth */
-pre > code {
-  -webkit-touch-callout: default;
-  -webkit-user-select: text;
-  -moz-user-select: text;
-  -ms-user-select: text;
-  user-select: text;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Logo web */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: #000; /* fallback nền đen */
+}
+
+/* LAYOUT CHUNG       */
+section {
+  min-height: 100vh; /* chiếm toàn màn hình */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* NAVBAR             */
+.navbar {
+  position: fixed; /* luôn trên cùng */
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  z-index: 1000;
+}
+
+/* logo trong navbar */
 .logo img {
-  height: 40px; /* chỉnh kích thước logo */
+  height: 40px;
   width: auto;
   vertical-align: middle;
 }
 
-/* Navbar( thanh tren cung ) */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #222;
-  color: #fff;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-}
-/* Noi dung trên thanh nav */
-.navbar .navcontent {
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
+/* danh sách menu */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
-  margin: 0;
-  padding: 0;
+  gap: 30px;
 }
 
+.nav-links li {
+  display: inline;
+}
+
+/* link trong menu */
 .nav-links a {
-  color: white;
   text-decoration: none;
+  color: white;
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 18px;
+  transition: color 0.3s, border-bottom 0.3s;
 }
 
-/* Nút chuyển theme */
-#theme-toggle {
-  background: transparent;
-  border: 1px solid #fff;
-  color: #fff;
-  padding: 5px 10px;
-  cursor: pointer;
-  border-radius: 5px;
+.nav-links a:hover {
+  color: #ff00a6c4;
 }
 
-/* Fix scroll ngang và style code block */
-pre {
-  white-space: pre-wrap; /* Xuống dòng khi dài quá */
-  word-wrap: break-word; /* Ngắt từ nếu cần */
-  overflow-x: auto; /* Nếu quá dài thì cuộn ngang trong khung */
-  max-width: 100%;
+.nav-links a.active {
+  color: #00eaff;
+  border-bottom: 2px solid #00eaff;
+}
+
+/* 4. CÁC SECTION RIÊNG  */
+
+/* Welcome section */
+#welcome {
+  background: url("../icon/background.jpg") no-repeat center/cover;
+  text-align: center;
+}
+
+/* Introduce */
+.introduce {
+  background: #111;
+}
+
+/* Skills */
+.skills {
+  background: #222;
+}
+
+/* Projects */
+.projects {
+  padding: 80px 10%;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.projects h1 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Contact */
+.contact {
+  background: #444;
+}
+
+/* PROJECT CARDS      */
+.project-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; /* tự xuống dòng */
+}
+
+.project-card {
+  background: #2c2c2c;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  flex: 1 1 calc(33% - 20px); /* 3 card / 1 hàng */
+  min-width: 250px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-card h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #00d8ff;
+}
+
+.project-card p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.project-card a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #03b6d6;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+.project-card a:hover {
+  background: #009ec3;
 }

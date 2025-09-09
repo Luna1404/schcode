@@ -1,0 +1,64 @@
+/* Reset nhẹ */
+body {
+  margin: 0;
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden; /*Không cho kéo ngang trang */
+}
+
+/* Tắt highlight / popup khi nhấn giữ trên mobile hay đơn giản hơn là cấm copy đó */
+body {
+  -webkit-touch-callout: none; /* Safari iOS */
+  -webkit-user-select: none; /* Safari/Chrome mobile */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge cũ */
+  user-select: none; /* tiêu chuẩn */
+}
+/* Nằm trong thẻ code vẫn copy dc bth */
+pre > code {
+  -webkit-touch-callout: default;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Logo web */
+.logo img {
+  height: 40px; /* chỉnh kích thước logo */
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Navbar( thanh tren cung ) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+}
+/* Noi dung trên thanh nav */
+.nav-links {
+  list-style: none;
+  display: flex;
+  font-size: 16px;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Fix scroll ngang và style code block */
+pre {
+  white-space: pre-wrap; /* Xuống dòng khi dài quá */
+  word-wrap: break-word; /* Ngắt từ nếu cần */
+  overflow-x: auto; /* Nếu quá dài thì cuộn ngang trong khung */
+  max-width: 100%;
+}

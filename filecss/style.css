@@ -1,4 +1,6 @@
-/* Định nghĩa màu*/
+/* ===================== */
+/* 1. VARIABLES & RESET  */
+/* ===================== */
 :root {
   --bg: #0f0f0f;
   --card: #1a1a1a;
@@ -10,7 +12,19 @@
   --border: #2a2a2a;
 }
 
-/* Dark mode */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+/* ===================== */
+/* 2. DARK MODE          */
+/* ===================== */
 body.dark {
   background: #222;
   color: #eee;
@@ -23,7 +37,7 @@ body.dark .navbar {
 body.dark #theme-toggle {
   border-color: #eee;
 }
-/* Khi dark mode thi menu mau sang */
+
 body.dark a {
   color: white;
 }
@@ -31,80 +45,88 @@ body.dark a {
 body.dark pre code {
   background-color: #2a2a2a;
 }
-/* Ngan cach giua cac muc */
-ul.barrier > li {
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc; /* thay cho <hr> */
-  padding-bottom: 10px;
+
+body.dark .menu a {
+  color: white;
 }
 
-/* Ghi chu */
+body.dark .footer-row {
+  border-top: 1px solid var(--text);
+}
+
+body.dark .site-footer {
+  color: white;
+}
+
+/* ===================== */
+/* 3. TYPOGRAPHY & NOTES */
+/* ===================== */
 .note {
   padding: 8px;
   border-left: 4px solid orange;
   font-style: italic;
 }
 
-/* Cho danh sách nhìn gọn hơn */
+/* ===================== */
+/* 4. LISTS              */
+/* ===================== */
+ul.barrier > li {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
 ol,
 ul {
-  margin: 5px 0 5px 20px; /* Khoảng cách */
+  margin: 5px 0 5px 20px;
   padding: 0;
 }
-html {
-  scroll-behavior: smooth;
+
+/* menu link */
+ol.menu a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
 }
 
-/* Bỏ style mặc định của link */
-ol.menu,
-ul.menu {
-  a {
-    text-decoration: none; /* Bỏ gạch chân */
-    color: black; /* Màu chữ */
-    font-weight: 500; /* Chữ đậm nhẹ */
-  }
-
-  /* Khi hover thì đổi màu cho rõ hơn */
-  a:hover {
-    text-decoration: underline; /* Gạch chân khi hover (tuỳ chọn) */
-  }
+ol.menu a:hover {
+  text-decoration: underline;
 }
 
+/* ===================== */
+/* 5. CODE BLOCK         */
+/* ===================== */
 pre code {
   display: block;
   font-family: "Fira Code", "Cascadia Code", "Consolas", "Courier New",
     monospace;
   font-size: 14px;
   line-height: 1.5;
-  background-color: #222; /* màu nền pre code */
-  color: #d4d4d4; /* chữ xám nhạt */
+  background-color: #222;
+  color: #d4d4d4;
   padding: 12px 16px;
   border-radius: 6px;
   overflow-x: auto;
 }
-/* Áp dụng tất cả phần tử */
-* {
-  box-sizing: border-box;
-}
 
-html,
-body {
-  margin: 0;
-}
-
-/* Định dạng lại văn bản */
+/* ===================== */
+/* 6. LAYOUT             */
+/* ===================== */
 .container {
-  max-width: 1200px; /* Giới hạn chiều rộng nội dung */
-  margin: 0 auto; /* Căn giữa */
-  padding: 20px; /* Cách lề trong */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
-/* Grid của bài viết, cai khung bao boc tat ca card, toi da la 3*/
+
 .khungcard {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 16px;
 }
-/* Card là thẻ <a> block để toàn khung bấm được */
+
+/* ===================== */
+/* 7. CARD SYSTEM        */
+/* ===================== */
 .card {
   display: block;
   background: var(--card);
@@ -116,37 +138,35 @@ body {
   transition: transform 0.12s ease, box-shadow 0.12s ease, border-color 0.12s;
 }
 
-/* khi trỏ chuột vào thì cái card đi lên 1 tí */
 .card:hover {
   transform: translateY(-2px);
   border-color: #3a3a3a;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-/* Ảnh/placeholder */
+/* media trong card */
 .card-media {
   height: 140px;
   background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
 }
 
-/* Nội dung card can le` */
+/* nội dung card */
 .card-body {
   padding: 14px;
 }
-/* Tag cua card */
-.tag {
+
+/* tag */
+.card .tag {
   display: inline-block;
-  font-size: 0.75rem;
-  line-height: 1;
-  padding: 6px 8px;
-  border-radius: 999px;
-  background: #2b2b2b;
-  color: #f5f5f5;
-  border: 1px solid var(--border);
-  margin-bottom: 10px;
+  background: #444;
+  color: #fff;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 5px;
+  margin-bottom: 8px;
 }
 
-/* Tiêu đề card */
+/* title */
 .card-title {
   margin: 0.2rem 0 0.3rem;
   font-size: 1.05rem;
@@ -154,23 +174,26 @@ body {
   color: white;
 }
 
-/* Ghi o duoi tieu de */
+/* note */
 .card-note {
   margin: 0.2rem 0 0.6rem;
   color: var(--muted);
 }
-/* Tac gia se ghi o duoi cung */
+
+/* author */
 .author {
   font-size: 0.85rem;
   color: #9a9a9a;
 }
 
-/* Footer, cai duoi cung` trang web */
+/* ===================== */
+/* 8. FOOTER             */
+/* ===================== */
 .footer-row {
   border-top: 1px solid var(--border);
   display: flex;
-  justify-content: space-between; /* đẩy 2 footer ra 2 bên */
-  align-items: center; /* canh giữa theo trục dọc */
+  justify-content: space-between;
+  align-items: center;
 }
 
 .site-footer {
@@ -182,65 +205,11 @@ body {
 .site-footer a {
   color: #cfcfcf;
 }
+
 .site-footer strong {
-  /* Cai gmail cua footer*/
-  color: #1e90ff;
-}
-body.dark .footer-row {
-  border-top: 1px solid var(--text);
-}
-body.dark .site-footer {
-  color: white;
+  color: #1e90ff; /* Gmail */
 }
 
-/* Navbar dropdown, cai phan noi dung cua index */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #222;
-  min-width: 160px;
-  padding: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  z-index: 1;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Tag nhỏ trên card */
-.card .tag {
-  display: inline-block;
-  background: #444;
-  color: #fff;
-  font-size: 12px;
-  padding: 3px 6px;
-  border-radius: 5px;
-  margin-bottom: 8px;
-}
-
-.dropdown-content a {
-  display: block;
-  color: #ffffff !important; /* ép luôn trắng */
-  padding: 5px;
-  text-decoration: none !important;
-}
-
-.dropdown-content a:hover {
-  background-color: #444; /* hiệu ứng hover */
-  border-radius: 5px;
-}
+/* ===================== */
+/* 9. NAVBAR + DROPDOWN  */
+/* ===================== */

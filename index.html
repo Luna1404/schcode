@@ -1,111 +1,66 @@
-<!--
-1. Ctrl + K + C để chú thích nhanh nhé ~~
-2. F1 -> show live server preview để mở cái web kế bên
-3. Alt + W để tạo thẻ nhanh
-4. Thẻ: b in đậm, i in nghiêng, u gạch chân,
-h tiêu đề, p đoạn văn bản, ul/ol danh sách không/có thứ tự (li là mỗi dòng của danh sách)
-5. Lorem(number hoặc *number) để tạo số từ hoặc số dòng chữ ngẫu nhiên
-6. <a href=" "(để trống sẽ reload trang,dấu # để trở lên đầu trang, / về trang chủ)target = "_blank"(Tạo trang mới, _self để mở tại trang hiện tại)> Nội dung</a> 
--->
-
 <!DOCTYPE html>
 <html lang="vn">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="filecss/style.css" />
+
     <link rel="stylesheet" href="filecss/index.css" />
+
     <link rel="icon" href="icon/FB_IMG_1750996739760.jpg" />
-    <title>Schcode</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Schlagen</title>
   </head>
   <body>
     <nav class="navbar">
-      <a href=" " class="logo">
+      <a href="#welcome" class="logo">
         <img src="icon/furina.jpg" alt="Logo" />
       </a>
       <ul class="nav-links">
-        <li class="dropdown">
-          <button class="dropbtn">Nội dung ▼</button>
-          <div class="dropdown-content">
-            <a href="#" data-tag="all">Chọn tất cả</a>
-            <a href="#" data-tag="html">HTML</a>
-            <a href="#" data-tag="css">CSS</a>
-            <a href="#" data-tag="js">JavaScript</a>
-            <a href="#" data-tag="c++">C++</a>
-          </div>
-        </li>
-        <li>Giới thiệu</li>
+        <li><a href="#welcome">Home</a></li>
+        <li><a href="#introduce">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
-      <button id="theme-toggle">🌙</button>
-      <script src="filejs/script.js"></script>
     </nav>
-    <!-- Nội dung ghi vào div này -->
-    <main class="container">
-      <h2>
-        This site is created to share my information about HTML, CSS, JS, ...
-      </h2>
 
-      <section class="khungcard">
-        <a
-          class="card"
-          href="feature/schtml.html"
-          aria-label="HTML cơ bản"
-          data-tags="html"
-        >
-          <div
-            class="card-media"
-            role="img"
-            aria-label="Ảnh minh họa HTML"
-          ></div>
-          <div class="card-body">
-            <span class="tag">HTML</span>
-            <h2 class="card-title">HTML cơ bản cho người mới</h2>
-            <p class="card-note">
-              Những thẻ quan trọng, cách cấu trúc trang, và mẹo viết semantic…
-            </p>
-            <span class="author">Schlagen</span>
-          </div>
-        </a>
-        <a class="card" href=" " aria-label="C++ cơ bản" data-tags="c++">
-          <div
-            class="card-media"
-            role="img"
-            aria-label="Ảnh minh họa C++"
-          ></div>
-          <div class="card-body">
-            <span class="tag">C++</span>
-            <h2 class="card-title">C++ cơ bản cho người mới</h2>
-            <p class="card-note">Kiến thức cơ bản về C++</p>
-            <span class="author">Jing bố</span>
-          </div>
-        </a>
-        <!-- Muốn thêm card thì thêm vào đây -->
+    <section id="welcome" class="welcome">
+      <h1>Welcome to my</h1>
+      <h2>personal project</h2>
+    </section>
 
-        <!--  -->
-      </section>
-    </main>
-    <div class="footer-row">
-      <div class="site-footer">© Trang chủ của Schcode</div>
-      <div class="site-footer">
-        Contact: <strong>luanoffical1404@gmail.com</strong>
+    <section id="introduce" class="introduce">
+      <h1>About Me</h1>
+      <p></p>
+    </section>
+
+    <section id="skills" class="skills">
+      <h1>My Skills</h1>
+      <p></p>
+    </section>
+
+    <section id="projects" class="projects">
+      <h1>Projects</h1>
+      <div class="project-list">
+        <div class="project-card">
+          <h2>Schcode</h2>
+          <p>This project is crate to share my infomation about coding</p>
+          <a href="feature/schcode.html" target="_blank">See More!</a>
+        </div>
+        
+        <!-- Update here -->
+        </div>
       </div>
-    </div>
+    </section>
 
-    <script>
-      document.querySelectorAll(".dropdown-content a").forEach((link) => {
-        link.addEventListener("click", (e) => {
-          e.preventDefault();
-          const tag = link.getAttribute("data-tag");
-
-          document.querySelectorAll(".card").forEach((card) => {
-            if (tag === "all" || card.dataset.tags.includes(tag)) {
-              card.style.display = "block";
-            } else {
-              card.style.display = "none";
-            }
-          });
-        });
-      });
-    </script>
+    <section id="contact" class="contact">
+      <h1>Contact Me</h1>
+      <p></p>
+    </section>
+    <script src="filejs/index.js"></script>
   </body>
 </html>
